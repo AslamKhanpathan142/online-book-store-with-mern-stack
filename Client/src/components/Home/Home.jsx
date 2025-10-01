@@ -58,9 +58,9 @@ const Home = () => {
               <Link to="/Allbooks" className={styles.primaryBtn}>
                 Explore Books
               </Link>
-              <Link to="/AIBookReader" className={styles.secondaryBtn}>
+              <a href="#" className={styles.secondaryBtn}>
                 Read with AI
-              </Link>
+              </a>
             </div>
           </div>
           <div className={styles.heroVisual}>

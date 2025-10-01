@@ -8,7 +8,7 @@ const cartRoute = require('./routes/addToCartRoute.js');
 const userRoute = require('./routes/userRoutes.js');
 const orderRoute = require('./routes/orderRoutes.js'); 
 const feedbackRoute = require('./routes/feedbackRoutes.js')
-const chatBotRoute = require('./routes/chatBotRoute.js')
+
 
 const app = express()
 
@@ -30,7 +30,7 @@ app.use('/cart', cartRoute);
 app.use('/profile', userRoute);
 app.use('/order', orderRoute);
 app.use('/feedback', feedbackRoute);
-app.use('/chat', chatBotRoute)
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

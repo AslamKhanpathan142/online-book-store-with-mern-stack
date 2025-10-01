@@ -17,7 +17,6 @@ import AddToCart from "./components/AddToCart/AddToCart.jsx";
 import UserProfile from "./components/User/UserProfile.jsx";
 import Register from "./components/Register/Register.jsx";
 import Login from "./components/Login/Login.jsx";
-import AIBookReader from "./components/AIBook/AIBookReader.jsx";
 import AdminHome from "./Admin/AdminHome.jsx";
 import UserRoute from "./components/AuthRoute/UserRoute.jsx";
 import ProtectedRoute from "./components/AuthRoute/ProtectedRoute.jsx";
@@ -85,14 +84,7 @@ const router = createBrowserRouter(
           }
         ></Route>
 
-        <Route
-          path="AIBookReader"
-          element={
-            <UserRoute>
-              <AIBookReader />
-            </UserRoute>
-          }
-        ></Route>
+       
 
         {/* Register & Login */}
         <Route

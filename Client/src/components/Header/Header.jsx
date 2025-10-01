@@ -90,9 +90,9 @@ const Header = ({ showCartItems }) => {
 
         {isLoggedIn ? (
           <div className={styles.navActions}>
-            <Link to="/AIBookReader" className={styles.searchBtn}>
+            <a href="#" className={styles.searchBtn}>
               AI
-            </Link>
+            </a>
             <Link to="/AddToCart" className={styles.cartBtn}>
               <i className="fas fa-shopping-cart"></i>
               <span className={styles.cartCount}>{showCartItems.length}</span>
