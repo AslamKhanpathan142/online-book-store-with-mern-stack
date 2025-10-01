@@ -1,0 +1,379 @@
+/* Register.module.css */
+.register {
+  padding-top: 80px;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.header {
+  padding: 2rem 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(138, 43, 226, 0.1), rgba(0, 180, 216, 0.1));
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #b3b3b3;
+}
+
+/* Content */
+.content {
+  padding: 3rem 0;
+}
+
+.registerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Register Card */
+.registerCard {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid #333333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.registerIllustration {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.illustration {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8a2be2 0%, #00b4d8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+}
+
+.registerIllustration h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.registerIllustration p {
+  color: #b3b3b3;
+  font-size: 1rem;
+}
+
+/* Form */
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputContainer i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8a2be2;
+  font-size: 1.1rem;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  background: #242424;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputContainer input:focus {
+  outline: none;
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+.inputContainer input.errorInput {
+  border-color: #e63946;
+}
+
+.errorText {
+  color: #e63946;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+/* Terms */
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #8a2be2;
+}
+
+.terms label {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.terms a {
+  color: #8a2be2;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Register Button */
+.registerBtn {
+  padding: 1rem;
+  background: #8a2be2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.registerBtn:hover:not(:disabled) {
+  background: #9b45f0;
+  transform: translateY(-2px);
+}
+
+.registerBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333333;
+}
+
+.divider span {
+  position: relative;
+  background: #1a1a1a;
+  padding: 0 1rem;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+/* Social Login */
+.socialLogin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialBtn {
+  padding: 0.8rem;
+  background: #242424;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.socialBtn:hover {
+  background: #2a2a2a;
+  border-color: #8a2be2;
+}
+
+/* Login Link */
+.loginLink {
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.loginLink a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+/* Features */
+.features {
+  padding-left: 1rem;
+}
+
+.features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  transition: all 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateX(5px);
+  border-color: #8a2be2;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #8a2be2;
+  flex-shrink: 0;
+}
+
+.featureContent h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.featureContent p {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .registerContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .features {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .socialLogin {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .registerCard {
+    padding: 1.5rem;
+  }
+  
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .featureIcon {
+    align-self: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.registerCard {
+  animation: fadeIn 0.6s ease;
+}
+
+.featureItem:nth-child(1) { animation: fadeIn 0.6s ease 0.1s both; }
+.featureItem:nth-child(2) { animation: fadeIn 0.6s ease 0.2s both; }
+.featureItem:nth-child(3) { animation: fadeIn 0.6s ease 0.3s both; }
+.featureItem:nth-child(4) { animation: fadeIn 0.6s ease 0.4s both; }

@@ -1,0 +1,242 @@
+/* components/Navbar/Navbar.module.css */
+
+:root {
+  --dark-bg: #0f0f0f;
+  --darker-bg: #080808;
+  --card-bg: #1a1a1a;
+  --card-hover: #242424;
+  --primary: #8a2be2;
+  --primary-light: #9b45f0;
+  --secondary: #00b4d8;
+  --accent: #ff6b6b;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #888888;
+  --border-color: #333333;
+  --success: #4ecdc4;
+  --warning: #ffd166;
+  --error: #ff6b6b;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 0;
+  background: rgba(10, 10, 10, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo i {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--primary);
+}
+
+.logo:hover i {
+  color: var(--text-primary);
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.navLink.active {
+  color: var(--text-primary);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchBtn,
+.cartBtn,
+.profileBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--text-secondary);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.registerbtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--text-secondary);
+  width: 5.8rem;
+  height: 2.8rem;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.searchBtn:hover,
+.cartBtn:hover,
+.profileBtn:hover {
+  background: rgba(138, 43, 226, 0.2);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.cartCount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--primary);
+  color: var(--text-primary);
+  font-size: 0.7rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30px;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.menuToggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.menuToggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menuToggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+  }
+  
+  .navMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--darker-bg);
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navMenu.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .navLink {
+    padding: 1rem 2rem;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .navLink::after {
+    display: none;
+  }
+}
