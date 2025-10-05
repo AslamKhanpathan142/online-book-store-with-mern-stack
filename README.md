@@ -119,7 +119,7 @@ npm start
 ### 🧑 Author
 
 **Aslam Khan**
- - 📧 Email: your-email@example.com
+ - 📧 Email: khanaslampathan142@gmail.com
 
  - 🌐 GitHub: [My Github Account](https://your-live-demo-link.com)  
 
