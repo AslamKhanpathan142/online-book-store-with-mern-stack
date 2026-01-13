@@ -8,7 +8,7 @@ It allows users to **browse, search, and purchase books**, while admins can **ma
 ## 🚀 Features
 
 ### 👤 User Features
-- 🔐 User authentication (Login / Signup / Logout)  
+- 🔐 User authentication (Login / Signup / Logout)
 - 📖 Browse books by categories  
 - 🔎 Search books by title, author, or category  
 - 🛒 Add to cart & place orders  
@@ -117,11 +117,11 @@ npm start
 ---
 
 ### 🧑 Author
-
-**Aslam Khan**
+**Mo Aslam Khan**
  - 📧 Email: khanaslampathan142@gmail.com
 
- - 🌐 GitHub: [My Github Account](https://your-live-demo-link.com)  
+ - 🌐 GitHub: [My Github Account](https://your-live-demo-link.com)
+ - **For any queries or suggestions, feel free to contact me via email.**
 
 
 
